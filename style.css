@@ -2,9 +2,12 @@
     margin: 0;
     padding: 0;
 }
-
+html{
+    font-size: 62.5%; 
+}
 body{
     background-image: linear-gradient(to right,#909396, #cfa3e6, #dfcaa4, #96DADE,  #909396);
+    
 }
 
 .container{
@@ -17,7 +20,8 @@ body{
 }
 
 .display-text{
-    width: 800px;
+    width: 80vw;
+    max-width: 800px;
     text-align: center;
     
 }
@@ -26,11 +30,11 @@ body{
     text-shadow: 2px 2px rgb(131, 130, 130);
     color: #FFBF44;
     margin-bottom: 40px;
-    font-size: 50px;
+    font-size: 5rem;
 }
 
 .main-text2{
-    font-size: 30px;
+    font-size: 3rem;
     color: #320C44;
 }
 
@@ -40,8 +44,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 500px;
-    width: 400px;
+    height: 50vh;
+    max-height: 500px;
+    width: 80vw;
+    max-width: 400px;
     border: 2px solid #0F0586;
     border-radius: 20px;
     margin-right: 50px;
@@ -52,6 +58,7 @@ body{
     font-weight: 400;
     margin-bottom: 30px;
     color: white;
+    font-size: 2.5rem;
 }
 
 .form-login{
@@ -62,7 +69,8 @@ body{
 
 .login-places{
     margin: 10px;
-    width: 280px;
+    width: 60vw;
+    max-width: 280px;
     border-radius: 13px;
     padding: 5px;
 }
@@ -78,13 +86,14 @@ body{
     border-radius: 15px;
     text-align: center;
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: 600;
     background-color: #FFBF44;
 }
 
 .bottom-text{
     color: white;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 100;
 }
 
@@ -98,7 +107,73 @@ body{
 
 
 
-/* input:focus {
-    box-shadow: 0 0 0 0;
-    outline: 0;
-} */
+@media(max-width: 600px) {
+    html{
+        font-size: 50%;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .login{
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .display-text{
+        margin-top: 1px;
+        height: 5vh;
+    }
+
+    .main-text{
+        font-size: 2.5rem;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .main-text2{
+        font-size: 2rem;
+    }
+
+
+}
+
+@media(max-width: 950px){
+  
+    .container{
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .login{
+        margin: auto;
+    }
+}
+
+@media(max-width: 300px){
+    .login{
+        margin-top: 10px;
+    }
+
+}
+
+@media(max-width: 1300px){
+    .login{
+        min-height: 350px;
+    }
+    .display-text{
+        max-width: 450px;
+    }
+    .main-text{
+        font-size: 2.5rem;
+    }
+    .main-text2{
+        font-size: 2rem;
+     
+    }
+
+    
+
+}
