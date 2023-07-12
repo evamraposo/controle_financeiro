@@ -46,6 +46,7 @@ body{
     align-items: center;
     height: 50vh;
     max-height: 500px;
+    min-height: 400px;
     width: 80vw;
     max-width: 400px;
     border: 2px solid #0F0586;
@@ -106,59 +107,6 @@ body{
 }
 
 
-
-@media(max-width: 600px) {
-    html{
-        font-size: 50%;
-    }
-    .container{
-        display: flex;
-        flex-direction: column;   
-    }
-
-    .login{
-        margin: auto;
-        margin-top: 50px;
-        margin-bottom: 20px;
-    }
-
-    .display-text{
-        margin-top: 1px;
-        height: 5vh;
-    }
-
-    .main-text{
-        font-size: 2.5rem;
-        margin: auto;
-        margin-bottom: 20px;
-    }
-
-    .main-text2{
-        font-size: 2rem;
-    }
-
-
-}
-
-@media(max-width: 950px){
-  
-    .container{
-        display: flex;
-        flex-direction: column;   
-    }
-
-    .login{
-        margin: auto;
-    }
-}
-
-@media(max-width: 300px){
-    .login{
-        margin-top: 10px;
-    }
-
-}
-
 @media(max-width: 1300px){
     .login{
         min-height: 350px;
@@ -173,7 +121,52 @@ body{
         font-size: 2rem;
      
     }
+   
+}
 
-    
+@media(max-width: 950px){
+  
+    .container{
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .login{
+        margin: auto;
+    }
+}
+
+@media(max-width: 600px) {
+    html{
+        font-size: 50%;
+    }
+
+    .login{
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .display-text{
+        margin-top: 1px;
+        height: 5vh;
+    }
+
+    .main-text{
+        margin: auto;
+        margin-bottom: 20px;
+    }
 
 }
+
+
+@media(max-width: 300px){
+    html{
+        font-size: 40%;
+    }
+    
+    .login{
+        margin-top: 10px;
+    }
+
+}
+
