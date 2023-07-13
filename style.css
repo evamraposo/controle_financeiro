@@ -15,21 +15,19 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;
-    
+    height: 100vh;   
 }
 
+
 .display-text{
-    width: 80vw;
     max-width: 800px;
     text-align: center;
-    
+    margin: 10px;
 }
 
 .main-text{
     text-shadow: 2px 2px rgb(131, 130, 130);
     color: #FFBF44;
-    margin-bottom: 40px;
     font-size: 5rem;
 }
 
@@ -44,10 +42,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
     max-height: 500px;
     min-height: 400px;
-    width: 80vw;
+    padding: 20px;
     max-width: 400px;
     border: 2px solid #0F0586;
     border-radius: 20px;
@@ -109,7 +106,8 @@ body{
 
 @media(max-width: 1300px){
     .login{
-        min-height: 350px;
+        min-height: 300px;
+        margin: auto;
     }
     .display-text{
         max-width: 450px;
@@ -130,30 +128,11 @@ body{
         display: flex;
         flex-direction: column;   
     }
-
-    .login{
-        margin: auto;
-    }
 }
-
+ 
 @media(max-width: 600px) {
     html{
         font-size: 50%;
-    }
-
-    .login{
-        margin-top: 50px;
-        margin-bottom: 20px;
-    }
-
-    .display-text{
-        margin-top: 1px;
-        height: 5vh;
-    }
-
-    .main-text{
-        margin: auto;
-        margin-bottom: 20px;
     }
 
 }
@@ -161,12 +140,8 @@ body{
 
 @media(max-width: 300px){
     html{
-        font-size: 40%;
+        font-size: 30%;
     }
     
-    .login{
-        margin-top: 10px;
-    }
-
 }
 
