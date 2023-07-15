@@ -1,52 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Controle Financeiro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/generico.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Gudea:wght@400;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manjari:wght@100;400;700&family=Montserrat:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
+    <link rel="shortcut icon" href="./assets/icon2.ico" type="image/x-icon" />
 </head>
 
 <body>
-        <div class="container">
+    <header>
+        <span class="date gudea">
+            14 de julho de 2023
+        </span>
 
-            <section>
-                <div class="display-text">
-                    <h1 class="main-text montserrat">Aqui você pode fazer o seu controle financeiro de um jeito fácil e rápido!</h1>
+        <span class="hello-name gudea">
+            Olá, Fulano de Tal
+        </span>
 
-                    <p class="main-text2 manjari">Faça o controle de recebimentos, de despesas, descubra quanto irá sobrar no final do mês, visualize em quais categorias o seu dinheiro está sendo gasto.</p>
-                </div>
-            </section>
+    </header>
 
-            <section class="box-login">
+    <div class="container">
+        <div class="receipts">
+            <div>
+                <h1 class="title-receipt inter">Recebimentos</h1>
 
-                <div class="login">
+                <p class="inter">Insira aqui tudo o que você recebe, salário, cartão alimentação/refeição, qualquer tipo
+                    de renda/ganho extra.</p>
+            </div>
 
-                    <h2 class="acesse-conta manjari">
-                        Acesse sua conta
-                    </h2>
+            <div class="input-receipts">
+                <input type="text" name="name" id="description" placeholder="Descrição">
 
-                    <form class="form-login">
-                        <input class="login-places montserrat" type="text" placeholder="Email">
+                <input type="number" step='0.01' name="name" id="valor-receipts" placeholder="Valor">
 
-                        <input class="login-places montserrat" type="text" placeholder="Senha">
+                <button>+</button>
 
-                        <input class="entrar manjari" type="submit" value="Entrar">
-    
-    
-                    </form>
+            </div>
 
-                    <h3 class="bottom-text manjari">
-                        Não tem uma conta? <a class="bottom-text manjari" href="">Cadastre-se!</a> 
-                    </h3>
-                </div>
-
-            </section>
+            <div class="total-receipts gudea">
+                <span >TOTAL RECEBIMENTOS: 1024,00</span>
+            </div>
 
         </div>
+
+        <div class="expenses">
+            <h1 class="title-expenses inter">Despesas</h1>
+
+            <p class="inter">Insira aqui todos os seus gastos, cartão de crédito, locomoção, telefonia/internet,
+                alimentação, etc.</p>
+
+            <div class="input-expenses">
+                <select name="place" id="category">
+                    <option selected>Categoria</option>
+                    <option value="food">Alimentação</option>
+                </select>
+
+                <input type="number" name="name" id="valor-expenses" placeholder="Valor">
+
+                <button>+</button>
+
+            </div>
+
+            <div class="total-expenses gudea">
+                <span>TOTAL DESPESAS: 1024,00</span>
+            </div>
+
+        </div>
+
+        <div class="resume">
+            <div class="text-resume">
+                <span>NO FINAL DO MÊS IRÁ SOBRAR:
+                </span>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>

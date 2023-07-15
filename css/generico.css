@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%; 
+}
+
+body{
+    background-image: linear-gradient(to right,#909396, #cfa3e6, #dfcaa4, #96DADE,  #909396);
+    
+}
+
+.montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.manjari{
+    font-family: 'Manjari', sans-serif;
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.gudea{
+    font-family: 'Gudea', sans-serif;
+}
+
+.inter{
+    font-family: 'Inter', sans-serif;
+}

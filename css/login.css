@@ -1,14 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-html{
-    font-size: 62.5%; 
-}
-body{
-    background-image: linear-gradient(to right,#909396, #cfa3e6, #dfcaa4, #96DADE,  #909396);
-    
-}
+
 
 .container{
     display: flex;
@@ -23,12 +13,14 @@ body{
     max-width: 800px;
     text-align: center;
     margin: 10px;
+    
 }
 
 .main-text{
     text-shadow: 2px 2px rgb(131, 130, 130);
     color: #FFBF44;
     font-size: 5rem;
+    margin-bottom: 20px;
 }
 
 .main-text2{
@@ -36,7 +28,7 @@ body{
     color: #320C44;
 }
 
-.login{
+.box-login{
     background-color: #131212de;
     display: flex;
     flex-direction: column;
@@ -46,7 +38,7 @@ body{
     min-height: 400px;
     padding: 20px;
     max-width: 400px;
-    border: 2px solid #0F0586;
+    border: 1px solid #0F0586;
     border-radius: 20px;
     margin-right: 50px;
     
@@ -89,23 +81,17 @@ body{
     background-color: #FFBF44;
 }
 
-.bottom-text{
+.cadastre-se{
     color: white;
     font-size: 1.5rem;
     font-weight: 100;
 }
 
-.montserrat{
-    font-family: 'Montserrat', sans-serif;
-}
-
-.manjari{
-    font-family: 'Manjari', sans-serif;
-}
+ 
 
 
 @media(max-width: 1300px){
-    .login{
+    .box-login{
         min-height: 300px;
         margin: auto;
     }
@@ -126,7 +112,8 @@ body{
   
     .container{
         display: flex;
-        flex-direction: column;   
+        flex-direction: column;  
+        padding: 20px; 
     }
 }
  
