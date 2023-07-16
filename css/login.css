@@ -29,7 +29,7 @@
 }
 
 .box-login{
-    background-color: #131212de;
+    background-color: rgba(255, 255, 255, 0.418);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,7 +47,7 @@
     border-bottom: 1px #FFBF44 solid;
     font-weight: 400;
     margin-bottom: 30px;
-    color: white;
+    color: black;
     font-size: 2.5rem;
 }
 
@@ -82,9 +82,9 @@
 }
 
 .cadastre-se{
-    color: white;
+    color: black;
     font-size: 1.5rem;
-    font-weight: 100;
+    font-weight: 400;
 }
 
  

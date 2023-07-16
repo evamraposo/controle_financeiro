@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Controle Financeiro</title>
-    <link rel="stylesheet" href="./css/generico.css">
+    <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +14,7 @@
         rel="stylesheet">
 
     <link rel="shortcut icon" href="./assets/icon2.ico" type="image/x-icon" />
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -31,43 +32,57 @@
     <div class="container">
         <div class="receipts">
             <div>
-                <h1 class="title-receipt inter">Recebimentos</h1>
+                <h1 class="title gudea">Recebimentos</h1>
 
                 <p class="inter">Insira aqui tudo o que você recebe, salário, cartão alimentação/refeição, qualquer tipo
                     de renda/ganho extra.</p>
+
+                <div class="inputs">
+                    <input type="text" name="name" id="description" placeholder="Descrição">
+
+                    <input type="number" step='0.01' name="name" id="value-receipts" placeholder="Valor">
+
+                    <button onclick="addDescription()"><strong>+</strong></button>
+
+                </div>
+                <div id="container-receipts">
+                    <!-- <div class="description-value inter">
+                        <div class="receipt-description">Salário</div>
+                        <div class="receipt-value">2096,00</div>
+                    </div> -->
+
+                    <!-- <div class="description-value inter">
+                        <div class="receipt-description">Cartão alimentação</div>
+                        <div class="receipt-value">2096,00</div>
+                    </div> -->
+                </div>
             </div>
 
-            <div class="input-receipts">
-                <input type="text" name="name" id="description" placeholder="Descrição">
-
-                <input type="number" step='0.01' name="name" id="valor-receipts" placeholder="Valor">
-
-                <button>+</button>
-
-            </div>
 
             <div class="total-receipts gudea">
-                <span >TOTAL RECEBIMENTOS: 1024,00</span>
+                <span>TOTAL RECEBIMENTOS: 1024,00</span>
             </div>
 
         </div>
 
         <div class="expenses">
-            <h1 class="title-expenses inter">Despesas</h1>
+            <div>
+                <h1 class="title inter">Despesas</h1>
 
-            <p class="inter">Insira aqui todos os seus gastos, cartão de crédito, locomoção, telefonia/internet,
-                alimentação, etc.</p>
+                <p class="inter">Insira aqui todos os seus gastos, cartão de crédito, locomoção, telefonia/internet,
+                    alimentação, etc.</p>
 
-            <div class="input-expenses">
-                <select name="place" id="category">
-                    <option selected>Categoria</option>
-                    <option value="food">Alimentação</option>
-                </select>
+                <div class="inputs">
+                    <select name="place" id="category">
+                        <option selected>Categoria</option>
+                        <option value="food">Alimentação</option>
+                    </select>
 
-                <input type="number" name="name" id="valor-expenses" placeholder="Valor">
+                    <input type="number" name="name" id="value-expenses" placeholder="Valor">
 
-                <button>+</button>
+                    <button><strong>+</strong></button>
 
+                </div>
             </div>
 
             <div class="total-expenses gudea">
@@ -77,10 +92,8 @@
         </div>
 
         <div class="resume">
-            <div class="text-resume">
-                <span>NO FINAL DO MÊS IRÁ SOBRAR:
-                </span>
-            </div>
+            <h1 class="title gudea">Quanto sobra?</h1>
+            <span class="resume-value inter"></span>
         </div>
     </div>
 
