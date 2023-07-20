@@ -17,7 +17,7 @@
     <script src="script.js"></script>
 </head>
 
-<body>
+<body onchange="addSobra()">
     <header>
         <span class="date gudea">
             14 de julho de 2023
@@ -40,15 +40,17 @@
                 <div class="inputs">
                     <input type="text" name="name" id="description" placeholder="Descrição">
 
-                    <input type="number" step='0.01' name="name" id="value-receipts" placeholder="Valor">
+                    <input type="number"  name="name" id="value-receipts" placeholder="Valor">
 
-                    <button onclick="addDescription()"><strong>+</strong></button>
+                    <button id="add" onclick="addReceipts()"><strong>+</strong></button>
 
                 </div>
                 <div id="container-receipts">
                     <!-- <div class="description-value inter">
                         <div class="receipt-description">Salário</div>
                         <div class="receipt-value">2096,00</div>
+                        <button id="delete" onclick="deleteDescription()"><strong>x</strong></button>
+
                     </div> -->
 
                     <!-- <div class="description-value inter">
@@ -59,8 +61,8 @@
             </div>
 
 
-            <div class="total-receipts gudea">
-                <span>TOTAL RECEBIMENTOS: 1024,00</span>
+            <div class="ctotal-receipts gudea">
+                <span>TOTAL RECEBIMENTOS: <span id="total-receipts">0,00</span></span>
             </div>
 
         </div>
@@ -75,25 +77,38 @@
                 <div class="inputs">
                     <select name="place" id="category">
                         <option selected>Categoria</option>
-                        <option value="food">Alimentação</option>
+                        <option value="Alimentação">Alimentação</option>
+                        <option value="Cartão de Crédito">Cartão de Crédito</option>
                     </select>
 
                     <input type="number" name="name" id="value-expenses" placeholder="Valor">
 
-                    <button><strong>+</strong></button>
+                    <button id="add" onclick="addExpenses()"><strong>+</strong></button>
 
+                </div>
+                <div id="container-expenses">
+                    <!-- <div class="category-value inter">
+                        <div class="expense-category">Salário</div>
+                        <div class="expense-value">2096,00</div>
+                        <button class="delete" onclick="deleteDescription()"><strong>x</strong></button>
+                    </div> -->
+
+                    <!-- <div class="description-value inter">
+                        <div class="receipt-description">Cartão alimentação</div>
+                        <div class="receipt-value">2096,00</div>
+                    </div> -->
                 </div>
             </div>
 
-            <div class="total-expenses gudea">
-                <span>TOTAL DESPESAS: 1024,00</span>
+            <div class="ctotal-expenses gudea">
+                <span>TOTAL DESPESAS: <span id="total-expenses">0,00</span></span>
             </div>
 
         </div>
 
         <div class="resume">
             <h1 class="title gudea">Quanto sobra?</h1>
-            <span class="resume-value inter"></span>
+            <span class="resume-value inter">0,00</span>
         </div>
     </div>
 

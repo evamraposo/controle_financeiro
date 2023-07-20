@@ -49,7 +49,7 @@ header{
     border-radius: 3px;
 }
 
-.description-value{
+.description-value, .category-value{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -59,14 +59,14 @@ header{
     
 }
 
-.receipt-description, .receipt-value{
+.receipt-description, .receipt-value, .expense-category, .expense-value{
     border: 1px solid #6e4ceb;
     border-radius: 5px;
     width: 8vw;
     background-color: orange;
 }
 
-.total-receipts, .total-expenses{
+.ctotal-receipts, .ctotal-expenses{
     font-size: 2rem;
     color: white;
     font-weight: 700;
@@ -93,9 +93,13 @@ p{
     padding: 80px;
 }
 
+.resume-value{
+    font-size: 5rem;
+}
+
 #description, #category{
     border-radius: 6px;
-    width: 10vw;
+    width: 8vw;
     padding: 3px;
     border: none;
     font-family: 'Inter', sans-serif;
@@ -103,32 +107,45 @@ p{
 
 #value-expenses, #value-receipts{
     border-radius: 6px;
-    width: 6vw;
+    width: 8vw;
     padding: 3px;
     border: none;
     margin-left: 5px;
     font-family: 'Inter', sans-serif;
 }
 
-button{
+#add{
     width: 20px;
     height: 20px;
     border-radius: 10px;
     border: none;
     font-size: 15px;
     margin-left: 3px;
-}
-button:hover{
-    background-color: rgb(240, 178, 86);
+    align-self: center;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+#add:hover{
+    background-color: rgb(120, 216, 120);
 }
 
-input[type="number"] {
-    -moz-appearance: textfield;
+.delete{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
 }
+
+.delete:hover{
+    background-color: rgb(230, 66, 66);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+
+
 
