@@ -1,44 +1,16 @@
 var totalReceipts = 0
-
-function addReceipts(){
-
-    let container = document.getElementById("container-receipts")
-    let description = document.getElementById("description").value
-    let valuereceipts = document.getElementById("value-receipts").value
-   
-    totalReceipts += parseFloat(valuereceipts)
-    let ctotal = document.getElementById("total-receipts")
-    ctotal.innerHTML = totalReceipts
-
-    let id = Math.random()
-
-    let div = document.createElement('div')
-    div.classList.add("description-value")
-    div.classList.add("inter")
-    div.id = id
-    
-    
-    div.innerHTML = `<div class="receipt-description">${description}</div>
-    <div class="receipt-value">${valuereceipts}</div>
-    <button class="delete" id="${id}" onclick="deleteElement(this)"><strong>x</strong></button>
-    `
-
-    container.append(div)
-    document.getElementById("description").value = ""; //limpa a caixa de texto
-    document.getElementById("value-receipts").value = ""; //limpa a caixa de texto
-
-}
-
 var totalExpenses = 0
 
-function addExpenses(){
-    let container = document.getElementById("container-expenses")
-    let category = document.getElementById("category").value
-    let valuex = document.getElementById("value-expenses").value
+function addData(divContainer, descriptionPlace, valuePlace, totals){
 
-    totalExpenses += parseFloat(valuex)
-    let ctotal = document.getElementById("total-expenses")
-    ctotal.innerHTML = totalExpenses
+    let container = document.getElementById(divContainer)
+    let description = document.getElementById(descriptionPlace).value
+    let values = document.getElementById(valuePlace).value
+
+    
+    
+    let total = document.getElementById(totals)
+    
 
     let id = Math.random()
 
@@ -47,43 +19,70 @@ function addExpenses(){
     div.classList.add("inter")
     div.id = id
     
-    
-    div.innerHTML = `<div class="receipt-description">${category}</div>
-    <div class="receipt-value">${valuex}</div>
-    <button class="delete" id="${id}" onclick="deleteElement(this)"><strong>x</strong></button>
+    if (valuePlace == 'value-receipts'){
+
+        totalReceipts += parseFloat(values)
+        total.innerHTML = totalReceipts
+        div.innerHTML = `<div class="receipt-description">${description}</div>
+    <div class="receipt-value">${values}</div>
+    <button class="delete" id="${id}" onclick="deleteElement(this, 'total-receipts')"><strong>x</strong></button>
     `
 
-    container.append(div)
-    category.value = ""; //limpa a caixa de texto
-    valuex.value = ""; //limpa a caixa de texto
-}
-
-
-function deleteElement(element){
-    id = element.id
-    let div = document.getElementById(id)
-    div.innerHTML = "";
-
-    let child = document.getElementsByClassName('expense-value').value
-
-    let valor = document.getElementById('total-expenses')
-    console.log(child)
-
-    if (totalExpenses <= parseFloat(child)) {
-        totalExpenses = 1
-        valor.innerHTML =  totalExpenses
-
-    } else {
-        totalExpenses -= parseFloat(child)
-        valor.innerHTML =  totalExpenses
+    } else{
+        totalExpenses += parseFloat(values)
+        total.innerHTML = totalExpenses
+        div.innerHTML = `<div class="receipt-description">${description}</div>
+    <div class="receipt-value">${values}</div>
+    <button class="delete" id="${id}" onclick="deleteElement(this, 'total-expenses')"><strong>x</strong></button>
+    `
+        
     }
 
-
-    valor.innerHTML =  totalExpenses
-
-
+    container.append(div)
+    document.getElementById(descriptionPlace).value = ""; //limpa a caixa de texto
+    document.getElementById(valuePlace).value = ""; //limpa a caixa de texto
 
 }
+
+
+
+function deleteElement(element, totalPlace){
+    id = element.id
+    let div = document.getElementById(id)
+    let child = div.children[1].innerText
+
+    
+    
+
+    let valor = document.getElementById(totalPlace)
+    if (totalPlace == 'total-receipts'){
+
+        if (totalExpenses <= parseFloat(child)) {
+            totalReceipts = 0
+            valor.innerHTML =  "";
+            console.log(totalReceipts)
+    
+        } else {
+            totalReceipts -= parseFloat(child)
+            valor.innerHTML =  totalReceipts
+        }
+    }else{
+        if (totalExpenses <= parseFloat(child)) {
+            totalExpenses = 0
+            valor.innerHTML =  "";
+            console.log(totalExpenses)
+    
+        } else {
+            totalExpenses -= parseFloat(child)
+            valor.innerHTML =  totalExpenses
+        }
+    }
+    
+
+    div.innerHTML = "";
+
+}
+
 
 function addSobra(){
     let value = totalReceipts - totalExpenses
