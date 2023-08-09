@@ -8,7 +8,7 @@ html{
 }
 
 body{
-    background-image: linear-gradient(to right,#909396, #cfa3e6, #dfcaa4, #96DADE,  #909396);
+    background-image: linear-gradient(to right, #cfa3e6, #ecbb60, #96DADE);
     
 }
 
@@ -32,4 +32,10 @@ textarea:focus, input:focus, select:focus {
 
 .inter{
     font-family: 'Inter', sans-serif;
+}
+
+.dropdown-menu{
+    --bs-dropdown-bg: hsla(0, 0%, 100%, 0.705);   
+    --bs-dropdown-border-color: none;
+    --bs-dropdown-link-active-bg: orange;
 }

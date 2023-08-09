@@ -40,10 +40,12 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.548);
+    background-color: white;
     padding: 10px;
-    border-radius: 10px;
-    text-align: center;
+    /* border-radius: 10px; */
+    text-align: center; 
+    box-shadow: 1px 5px 10px rgb(90, 86, 86);
+   
 }
 
 .resume{
@@ -51,7 +53,6 @@ header{
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
-    border-radius: 10px;
     text-align: center;
 }
 
@@ -59,6 +60,7 @@ header{
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 3px;
+    
 }
 
 .description-value, .category-value{
@@ -67,6 +69,7 @@ header{
     justify-content: space-around;
     font-size: 1.3rem;
     margin-bottom: 5px;
+    
     
     
 }
@@ -79,20 +82,21 @@ header{
 }
 
 .ctotal-receipts, .ctotal-expenses{
-    font-size: 2rem;
-    color: white;
-    font-weight: 700;
-    padding: 10px;
-    background-color: #510B73; 
-    border-radius: 10px;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 500;
+    padding: 5px;
     margin-top: 40px;
+    font-family: 'DM Mono';
+    border-radius: 2px;
 }
 
 .title{
-    color: #510B73;
-    font-size: 3rem;
-    font-weight: 400;
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
     margin-bottom: 10px;
+    font-family: 'DM Mono';
 }
 
 p{
@@ -116,6 +120,7 @@ p{
     padding: 3px;
     border: none;
     font-family: 'Inter', sans-serif;
+    box-shadow: 1px 1px 1px 1px rgb(193, 232, 245);
 }
 
 #value-expenses, #value-receipts{
@@ -125,6 +130,7 @@ p{
     border: none;
     margin-left: 5px;
     font-family: 'Inter', sans-serif;
+    box-shadow: 1px 1px 1px 1px lightblue;
 }
 
 #add{
