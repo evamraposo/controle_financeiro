@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Controle Financeiro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +16,7 @@
 
     <link rel="shortcut icon" href="./assets/icon2.ico" type="image/x-icon" />
     <script src="script.js"></script>
+   
 </head>
 
 <body onchange="addSobra()">
@@ -23,9 +25,13 @@
             14 de julho de 2023
         </span>
 
-        <span class="hello-name gudea">
-            Olá, Fulano de Tal
-        </span>
+        <div class="dropdown-center">
+            <button class="hello-name gudea btn dropdown-toggle" type="button" data-bs-toggle="dropdown">Olá, Fulano de Tal</button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><a  class="menu-item gudea">Editar perfil</a></li>
+                <li class="dropdown-item"><a class="menu-item gudea" href="">Sair</a></li>
+            </ul>
+        </div>
 
     </header>
 
@@ -92,7 +98,7 @@
             <span class="resume-value inter"></span>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 
 </html>
