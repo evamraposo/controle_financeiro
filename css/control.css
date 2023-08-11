@@ -28,12 +28,10 @@ header{
     padding: 20px;
     align-self: center;
 }
+
 .container{
-  display: flex;
-  flex-direction: row; 
-  justify-content: space-around;
+  grid-gap: 50px;
   padding: 40px;
-  /* height: 80vh; */
 }
 
 .receipts, .expenses, .resume{
@@ -42,7 +40,6 @@ header{
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.692);
     padding: 10px;
-    /* border-radius: 10px; */
     text-align: center; 
     box-shadow: 1px 5px 10px rgb(90, 86, 86);
    
@@ -60,25 +57,29 @@ header{
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 3px;
-    
 }
 
 .description-value, .category-value{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    grid-gap: 5px;
+    justify-content: center;
     font-size: 1.3rem;
     margin-bottom: 5px;
     
-    
-    
+}
+
+.container, .inputs, .description-value, .category-value{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
 }
 
 .receipt-description, .receipt-value, .expense-category, .expense-value{
-    border: 1px solid #6e4ceb;
+    border: 1px solid white;
     border-radius: 5px;
-    width: 8vw;
-    background-color: orange;
+    width: 6vw;
+    color: white;
+    background-color: rgb(146, 195, 218);
 }
 
 .ctotal-receipts, .ctotal-expenses{
@@ -102,21 +103,19 @@ header{
 p{
     color: black;
     font-size: 1.3rem;
-    width: 15vw;
+    width: 80%;
     margin: auto;
 }
 
-/* .resume{
-    padding: 80px;
-} */
 
-.resume-value{
+#sobra{
     font-size: 5rem;
+    color: black;
 }
 
 #description, #category{
     border-radius: 6px;
-    width: 8vw;
+    width: 6vw;
     padding: 3px;
     border: none;
     font-family: 'Inter', sans-serif;
@@ -125,7 +124,7 @@ p{
 
 #value-expenses, #value-receipts{
     border-radius: 6px;
-    width: 8vw;
+    width: 6vw;
     padding: 3px;
     border: none;
     margin-left: 5px;
@@ -165,6 +164,60 @@ input::-webkit-inner-spin-button {
 margin: 0;
 }
 
+@media(max-width: 1980px){
 
+    #description, #category, #value-expenses, #value-receipts, .receipt-description, .receipt-value, .expense-category, .expense-value{
+        width: 10vw;
+    }
+    
+}
+
+@media(max-width: 1190px){
+    .container{
+        grid-gap: 20px;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+
+    }
+
+    #description, #category, #value-expenses, #value-receipts, .receipt-description, .receipt-value, .expense-category, .expense-value{
+        width: 20vw;
+    }
+}
+
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+        
+    }
+    
+}
+
+@media(max-width: 800px){
+   
+    #description, #category, #value-expenses, #value-receipts, .receipt-description, .receipt-value, .expense-category, .expense-value{
+        width: 30vw;
+    }
+}
+
+@media(max-width: 300px){
+   
+    html{
+        font-size: 40%;
+        
+    }
+
+    #description, #category, #value-expenses, #value-receipts, .receipt-description, .receipt-value, .expense-category, .expense-value{
+        width: 28vw;
+    }
+
+    #description, #category, #value-expenses, #value-receipts, .receipt-description, .receipt-value, .expense-category, .expense-value{
+        padding: 0.5px;
+    }
+
+    #sobra{
+        font-size: 6rem;
+    }
+}
 
 

@@ -82,6 +82,10 @@
     
 }
 
+.entrar a{
+    text-decoration: none;
+}
+
 .cadastre-se{
     color: black;
     font-size: 1.5rem;
@@ -133,6 +137,3 @@
     
 }
 
-.entrar a{
-    text-decoration: none;
-}

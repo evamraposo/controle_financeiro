@@ -21,19 +21,28 @@ function addData(divContainer, descriptionPlace, valuePlace, totals){
     
     if (valuePlace == 'value-receipts'){
 
-        totalReceipts += parseFloat(values)
-        total.innerHTML = totalReceipts
+        
+
+        if (values != ""){
+            totalReceipts += parseFloat(values)
+            total.innerHTML = totalReceipts
+        }
+
         div.innerHTML = `<div class="receipt-description">${description}</div>
     <div class="receipt-value">${values}</div>
-    <button class="delete" id="${id}" onclick="deleteElement(this, 'total-receipts')"><strong>x</strong></button>
+    <button class="delete" id="${id}" onclick="deleteElement(this, 'total-receipts');addSobra()"><strong>x</strong></button>
     `
 
     } else{
-        totalExpenses += parseFloat(values)
-        total.innerHTML = totalExpenses
+
+        if (values != ""){
+            totalExpenses += parseFloat(values)
+            total.innerHTML = totalExpenses
+        }
+        
         div.innerHTML = `<div class="receipt-description">${description}</div>
     <div class="receipt-value">${values}</div>
-    <button class="delete" id="${id}" onclick="deleteElement(this, 'total-expenses')"><strong>x</strong></button>
+    <button class="delete" id="${id}" onclick="deleteElement(this, 'total-expenses');addSobra()"><strong>x</strong></button>
     `
         
     }
@@ -51,42 +60,40 @@ function deleteElement(element, totalPlace){
     let div = document.getElementById(id)
     let child = div.children[1].innerText
 
-    
-    
 
     let valor = document.getElementById(totalPlace)
     if (totalPlace == 'total-receipts'){
 
-        if (totalExpenses <= parseFloat(child)) {
+        if ((totalExpenses <= parseFloat(child)) || (isNaN(parseFloat(child)) == true)) {
             totalReceipts = 0
             valor.innerHTML =  "";
-            console.log(totalReceipts)
     
         } else {
             totalReceipts -= parseFloat(child)
             valor.innerHTML =  totalReceipts
         }
     }else{
-        if (totalExpenses <= parseFloat(child)) {
+        if ((totalExpenses <= parseFloat(child)) || (isNaN(parseFloat(child)) == true)) {
             totalExpenses = 0
             valor.innerHTML =  "";
-            console.log(totalExpenses)
     
         } else {
             totalExpenses -= parseFloat(child)
             valor.innerHTML =  totalExpenses
         }
     }
-    
 
-    div.innerHTML = "";
+    div.remove()
 
 }
 
 
 function addSobra(){
-    let value = totalReceipts - totalExpenses
-    let sobra = document.getElementsByClassName("resume-value")
-    sobra.innerHTML = value
+
+        let value = totalReceipts - totalExpenses
+        let sobra = document.getElementById("sobra")
+        sobra.innerHTML = value
+    
 }
+    
 

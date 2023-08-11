@@ -7,7 +7,7 @@
     <title>Meu Controle Financeiro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/control.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,7 +21,7 @@
    
 </head>
 
-<body onchange="addSobra()">
+<body >
     <header>
         <span class="date gudea">
             14 de julho de 2023
@@ -42,15 +42,22 @@
             <div>
                 <h1 class="title gudea card-title">RECEBIMENTOS</h1>
                 <hr>
-                <p class="inter card-subtitle">Insira aqui tudo o que você recebe, salário, cartão alimentação/refeição, qualquer tipo
-                    de renda/ganho extra.</p>
+                <p class="inter card-subtitle subtitle">Insira aqui tudo o que você recebe, salário, cartão alimentação/refeição, qualquer tipo
+                    de renda extra.</p>
 
                 <div class="inputs">
-                    <input type="text" name="name" id="description" placeholder="Descrição">
+                    <select name="place" id="description">
+                        <option selected>Categoria</option>
+                        <option value="Salário">Salário</option>
+                        <option value="Cartão alimentação">Cartão alimentação</option>
+                        <option value="Cartão refeição">Cartão refeição</option>
+                        <option value="Comissão">Comissão</option>
+                        <option value="Renda extra">Renda extra</option>
+                    </select>
 
                     <input type="number"  name="name" id="value-receipts" placeholder="Valor">
 
-                    <button id="add" onclick="addData('container-receipts', 'description', 'value-receipts', 'total-receipts')"><strong>+</strong></button>
+                    <button id="add" onclick="addData('container-receipts', 'description', 'value-receipts', 'total-receipts');addSobra()"><strong>+</strong></button>
 
                 </div>
                 <div id="container-receipts">
@@ -82,7 +89,7 @@
 
                     <input type="number" name="name" id="value-expenses" placeholder="Valor">
 
-                    <button id="add" onclick="addData('container-expenses', 'category', 'value-expenses', 'total-expenses')"><strong>+</strong></button>
+                    <button id="add" onclick="addData('container-expenses', 'category', 'value-expenses', 'total-expenses');addSobra()"><strong>+</strong></button>
 
                 </div>
                 <div id="container-expenses">
@@ -99,7 +106,7 @@
 
         <div class="resume card">
             <h1 class="title gudea card-title">QUANTO SOBRA?</h1>
-            <span class="resume-value inter card-body"></span>
+            <div class="inter card-body" id="sobra"></div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
